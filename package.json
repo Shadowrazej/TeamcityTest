@@ -1,0 +1,11 @@
+{
+  "name": "angulartest",
+  "version": "1.0.0",
+  "author": "Scherbovich Igor",
+  "scripts": {
+    "test": "node test-conf.js"
+  },
+  "dependencies": {
+    "protractor": "^5.3.1"
+  }
+}
