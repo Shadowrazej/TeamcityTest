@@ -50,7 +50,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * Проверяем всплывающее название(title) строчного элемента
      */
-    it ('Test element title', async function() {
+    xit ('Test element title', async function() {
         var elem = pageObject.getLinkLineElement('a', 'modules');
         expect(await pageObject.getTitle(elem)).toEqual('ES2015 Modules');
     });
