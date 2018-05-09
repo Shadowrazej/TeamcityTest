@@ -8,7 +8,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * При открытии подменю класс collapsed изменяется на expanded, таким способом проверил: открылось ли подменю.
      */
-    it('Test submenu', async function () {
+    xit('Test submenu', async function () {
         await pageObject.buttonMenu.click();
         await pageObject.buttonTutorial.click();
         expect(await pageObject.elementTestExpand1.getAttribute('class')).toContain('expanded');
@@ -18,7 +18,7 @@ describe('angularjs homepage todo list', function() {
      * Открываем меню > подменю tutorial > закрываем меню > открываем меню.
      * Подменю tutorial осталось открытым
      */
-    it('Test menu with submenu', async function () {
+    xit('Test menu with submenu', async function () {
         await pageObject.buttonMenu.click();
         await pageObject.buttonTutorial.click();
         await pageObject.buttonMenu.click();
@@ -31,7 +31,7 @@ describe('angularjs homepage todo list', function() {
      * Подменю tutorial осталось открытым
      * При клике на Introduction в значение атрибута class добавляется 'selected'
      */
-    it('Test menu with submenu', async function () {
+    xit('Test menu with submenu', async function () {
         await pageObject.buttonMenu.click();
         await pageObject.buttonTutorial.click();
         await pageObject.buttonIntroduction.click();
