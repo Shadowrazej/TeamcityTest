@@ -74,7 +74,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * Тест смены языка на китайский
      */
-    it ('Test china language', async function() {
+    xit ('Test china language', async function() {
         await pageObject.chinaLanguage.click();
         expect(await pageObject.getBrowserCurrentUrl()).toBe('https://angular.cn/');
     });
