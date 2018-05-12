@@ -18,7 +18,7 @@ describe('angularjs homepage todo list', function() {
      * Открываем меню > подменю tutorial > закрываем меню > открываем меню.
      * Подменю tutorial осталось открытым
      */
-    it('Test menu with submenu', async function () {
+    it('Test menu with submenu 1', async function () {
         await pageObject.buttonMenu.click();
         await pageObject.buttonTutorial.click();
         await pageObject.buttonMenu.click();
@@ -31,7 +31,7 @@ describe('angularjs homepage todo list', function() {
      * Подменю tutorial осталось открытым
      * При клике на Introduction в значение атрибута class добавляется 'selected'
      */
-    it('Test menu with submenu', async function () {
+    it('Test menu with submenu 2', async function () {
         await pageObject.buttonMenu.click();
         await pageObject.buttonTutorial.click();
         await pageObject.buttonIntroduction.click();
@@ -82,7 +82,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * При вводе в строке поиска валидного значения появляется подменю(появляется <h2>Search Results</h2>)
      */
-    it('Test search field', async function () {
+    it('Test search field 1', async function () {
         await pageObject.searchField.click();
         await pageObject.searchField.sendKeys('angular');
         await browser.sleep(1500);
@@ -92,7 +92,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * При вводе в строке поиска не валидного значения появляется подменю(появляется <p>No results found.</p>)
      */
-    it('Test search field', async function () {
+    it('Test search field 2', async function () {
         await pageObject.searchField.click();
         await pageObject.searchField.sendKeys('asdasdqwe');
         await browser.sleep(1500);
@@ -102,7 +102,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * Тест перехода по ссылке в меню поиска
      */
-    it('Test search field', async function () {
+    it('Test search field 3', async function () {
         await pageObject.searchField.click();
         await pageObject.searchField.sendKeys('angular');
         await browser.sleep(1500);
