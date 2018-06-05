@@ -51,7 +51,7 @@ describe('angularjs homepage todo list', function() {
      * Проверяем всплывающее название(title) строчного элемента
      */
     xit ('Test element title', async function() {
-        var elem = pageObject.getLinkLineElement('a', 'modules');
+        var elem = await pageObject.getLinkLineElement('a', 'modules');
         expect(await pageObject.getTitle(elem)).toEqual('ES2015 Modules');
     });
 
@@ -85,7 +85,7 @@ describe('angularjs homepage todo list', function() {
     it('Test search field 1', async function () {
         await pageObject.searchField.click();
         await pageObject.searchField.sendKeys('angular');
-        await browser.sleep(1500);
+        await browser.sleep(10000);
         expect(await pageObject.searchResultsElement.isPresent()).toBe(true);
     });
 
@@ -95,7 +95,7 @@ describe('angularjs homepage todo list', function() {
     it('Test search field 2', async function () {
         await pageObject.searchField.click();
         await pageObject.searchField.sendKeys('asdasdqwe');
-        await browser.sleep(1500);
+        await browser.sleep(10000);
         expect(await pageObject.searchNoResultsElement.isPresent()).toBe(true);
     });
 
@@ -105,7 +105,7 @@ describe('angularjs homepage todo list', function() {
     it('Test search field 3', async function () {
         await pageObject.searchField.click();
         await pageObject.searchField.sendKeys('angular');
-        await browser.sleep(1500);
+        await browser.sleep(10000);
         await pageObject.searchElement.click();
         expect(await pageObject.getBrowserTitle()).toEqual('Angular - setAngularJSGlobal');
     });

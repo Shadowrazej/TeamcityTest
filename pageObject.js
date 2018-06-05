@@ -1,6 +1,6 @@
 var pageObject = function() {
 
-    this.buttonMenu = element(by.className('mat-button'));
+    this.buttonMenu = element(by.css('[title="Docs menu"]'));
     this.buttonTutorial = element(by.buttonText('Tutorial'));
     this.buttonIntroduction = element(by.cssContainingText('a', '1. Introduction'));
     this.angularHomeButton = element(by.css('[class="nav-link home"]'));
