@@ -29,7 +29,7 @@ describe('angularjs homepage todo list', function() {
      * Подменю tutorial осталось открытым
      * При клике на Introduction в значение атрибута class добавляется 'selected'
      */
-    xit('Test menu with submenu 2', async function () {
+    it('Test menu with submenu 2', async function () {
         await pageObject.buttonTutorial.click();
         await pageObject.buttonIntroduction.click();
         await pageObject.buttonMenu.click();
