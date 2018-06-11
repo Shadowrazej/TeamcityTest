@@ -10,5 +10,9 @@ exports.config = {
         jasmine.getEnv().addReporter(new AllureReporter({
             resultsDir: 'allure-results'
         }));
+    },
+    jasmineNodeOpts: {
+        showColors: true,
+        defaultTimeoutInterval: 600000,
     }
     };

@@ -8,8 +8,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * При открытии подменю класс collapsed изменяется на expanded, таким способом проверил: открылось ли подменю.
      */
-    xit('Test submenu', async function () {
-        await pageObject.buttonMenu.click();
+    it('Test submenu', async function () {
         await pageObject.buttonTutorial.click();
         expect(await pageObject.elementTestExpand1.getAttribute('class')).toContain('expanded');
     });
@@ -18,8 +17,7 @@ describe('angularjs homepage todo list', function() {
      * Открываем меню > подменю tutorial > закрываем меню > открываем меню.
      * Подменю tutorial осталось открытым
      */
-    xit('Test menu with submenu 1', async function () {
-        await pageObject.buttonMenu.click();
+    it('Test menu with submenu 1', async function () {
         await pageObject.buttonTutorial.click();
         await pageObject.buttonMenu.click();
         await pageObject.buttonMenu.click();
@@ -32,7 +30,6 @@ describe('angularjs homepage todo list', function() {
      * При клике на Introduction в значение атрибута class добавляется 'selected'
      */
     xit('Test menu with submenu 2', async function () {
-        await pageObject.buttonMenu.click();
         await pageObject.buttonTutorial.click();
         await pageObject.buttonIntroduction.click();
         await pageObject.buttonMenu.click();
@@ -43,14 +40,14 @@ describe('angularjs homepage todo list', function() {
     /**
      * Проверяем всплывающее название(title)
      */
-    xit ('Test browser title', async function() {
+    it ('Test browser title', async function() {
         expect(await pageObject.getBrowserTitle()).toEqual('Angular - What is Angular?');
     });
 
     /**
      * Проверяем всплывающее название(title) строчного элемента
      */
-    xit ('Test element title', async function() {
+    it ('Test element title', async function() {
         var elem = await pageObject.getLinkLineElement('a', 'modules');
         expect(await pageObject.getTitle(elem)).toEqual('ES2015 Modules');
     });
@@ -58,7 +55,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * Тест блочной ссылки
      */
-    xit ('Test block link', async function() {
+    it ('Test block link', async function() {
         await pageObject.linkBlockElement.click();
         expect(await pageObject.getBrowserTitle()).toEqual('Angular - QuickStart');
     });
@@ -66,7 +63,7 @@ describe('angularjs homepage todo list', function() {
     /**
      * Test Angular home page
      */
-    xit ('Test Angular home link', async function() {
+    it ('Test Angular home link', async function() {
         await pageObject.angularHomeButton.click();
         expect(await pageObject.getBrowserTitle()).toEqual('Angular');
     });
